@@ -242,6 +242,7 @@ ul {
 
 .about_content_box_all {
   padding: 28px;
+ 
 }
 
 
@@ -251,10 +252,12 @@ ul {
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	display: flex;
 	max-width: 100%;
-	margin: 20px;
   height: 100%;
 	overflow: hidden;
-
+  position: relative;
+  animation-name: left_to_right;
+  animation-duration: 5s;
+  margin-left: 20px;
 }
 
 .experience-card h6 {
@@ -542,3 +545,8 @@ ul {
 }
 
 
+
+@keyframes left_to_right {
+  from {left: -100px;}
+  to {left: 0px;}
+}
