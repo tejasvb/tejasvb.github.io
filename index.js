@@ -1,5 +1,6 @@
-$(document).ready(function() {
-    $('#topheader .navbar-nav a' ).on( 'click', function () {
-	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-	$( this ).parent( 'li' ).addClass( 'active' );
-}) });
+function navbar_on_focus(e){
+
+	$( '#topheader #navbar_ul' ).find( '.active' ).removeClass( 'active' );
+	//console.log(this)
+	$(e).addClass("nav-item active");
+}
