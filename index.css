@@ -5,6 +5,10 @@ body,html{
 
   	/* background-image: linear-gradient(45deg, #7175da, #9790F2); */
 }
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 header {
   text-align: center;
