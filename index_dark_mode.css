@@ -327,10 +327,11 @@ ul {
   animation-name: left_to_right;
   animation-duration: 5s;
   margin-left: 20px;
+  margin-bottom: 40px;
 }
 
 .experience-card h6 {
-	opacity: 0.6;
+	opacity: 1;
 	margin: 0;
 	letter-spacing: 1px;
 
