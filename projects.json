@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Breaking News",
+    "tags": ["Flutter"],
+    "info": "Implemented local storage and API connected to the front end. Apply night mode and landscape mode.",
+    "link": "https://github.com/tejasvb/Breaking-News"
+  },
+  {
+    "title": "SOS Notification",
+    "tags": ["Android", "Kotlin", "Firebase"],
+    "info": "SOS notification app which will send notifications to nearby helpers in database from your location.",
+    "link": "https://github.com/tejasvb/sos_notification"
+  },
+  {
+    "title": "Message",
+    "tags": ["Flutter", "Firebase"],
+    "info": "Implemented real-time messaging service using Cloud Firestore. Hosted service using firebase",
+    "link": "https://github.com/tejasvb/messenger"
+  },
+  {
+    "title": "Writer Place",
+    "tags": ["Android", "Kotlin", "Firebase"],
+    "info": "Developed an application enabling users to create, share, and delete articles, as well as like and follow other users' articles.",
+    "link": "https://github.com/tejasvb/WritersPlace"
+  },
+  {
+    "title": "Fingerprint Voting System",
+    "tags": ["Web"],
+    "info": "Fingerprint based detection election. Manually you need to add fingerprint for dectection.",
+    "link": "https://github.com/tejasvb/FingerprintElectionVotingSystem"
+  },
+  {
+    "title": "Search Engine of Image",
+    "tags": ["Django"],
+    "info": "This is a search engine for images with web annotaiton",
+    "link": "https://github.com/tejasvb/searchEnginOptimizerUsingWebAnnotations"
+  }
+]

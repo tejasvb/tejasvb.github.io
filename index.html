@@ -66,15 +66,19 @@
 <!-- front name -->
 
 <header>
-
     <!--Content before waves-->
     <div class="inner-header flex">
 
 
         <div class="intro-text">
-            <div class="heading-primary">HEY, I'M Tejas Borkar</div>
-            <div class="heading-info">I am a software developer driven by a passion for continuous learning and tackling complex challenges. </div>
-            <a href="#about" class="page-scroll header-button ">About Me</a>
+        <div class="heading-primary" style="font-size: 2.5rem; font-weight: 700; letter-spacing: 1px;">HEY, I'M Tejas Borkar</div>
+        <div class="heading-info" style="font-size: 1.25rem; color: #ffffff; margin: 1rem 0 1.5rem 0;">I am a software engineer driven by a passion for building scalable backend systems, harnessing data, and leveraging the cloud to solve complex challenges.</div>
+        <a href="#about" class="page-scroll header-button" style="font-size: 1.1rem; padding: 0.7rem 2.2rem; border-radius: 2rem;">About Me</a>
+             <div style="margin-top: 1.5rem;">
+          <a href="https://github.com/tejasvb" target="_blank" style="margin: 0 0.5rem; color: #333;"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://www.linkedin.com/in/tejas-borkar-03297b119/" target="_blank" style="margin: 0 0.5rem; color: #0077b5;"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="mailto:tvborkar1234@gmail.com" style="margin: 0 0.5rem; color: #c23a2b;"><i class="fas fa-envelope fa-lg"></i></a>
+        </div>
         </div>
     </div>
     
@@ -110,10 +114,8 @@
                         <p class="text_custom font-weight-bold">I am a Software Developer</p>
                     </div>
                     <h4 class="about_heading text-capitalize font-weight-bold mt-4">Tejas Vidhyadhar Borkar</h4>
-                    <p class="text-muted mt-3">  I am a versatile software developer with a passion for learning and a wide range of technical expertise. Currently, I work with Java, AWS, Python, and Spark. In the past, I worked on Flutter and also built projects in Android development.</br>
-                        In my college years, I was the Android team lead and core member of the Google Developer student club, we hosted sessions on different technologies one of them was  AndroidStudyJam for our college. where I organized sessions also I personally took sessions on Kotlin and we hosted a competition for Android development.
-            </br> You can go through My work experience <a href="#experience" class="page-scroll header-button ">here</a>  and some of my  personal projects<a href="#projects" class="page-scroll header-button "> here </a>
-                  
+                    <p class="text-muted mt-3">  I’m Tejas Borkar, a Senior Software Engineer experienced in building scalable backend systems, data pipelines, and cloud-native applications. At HERE Technologies, I’ve improved data quality by 60%, reduced compute costs, and delivered real-time resilient systems with AWS, Spark, and serverless workflows. I also develop React/Flutter apps, AI features, and automation frameworks, backed by strong academics (B.E. Computer Engineering, CGPA 9.76/10) and leadership through GDSC and volunteering.
+                      <br>  Check out my work experience <a href="#experience" class="page-scroll header-button ">here</a>  and personal projects<a href="#projects" class="page-scroll header-button "> here </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -405,7 +407,7 @@
                
                     <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft; ">
                         <h3 class="f-title f_600 t_color f_size_18">Tejas Borkar</h3>
-                        <p style="max-width: 400px;">I am a software developer driven by a passion for continuous learning and tackling complex challenges. </p>
+                        <p style="max-width: 400px;">I am a software engineer driven by a passion for building scalable backend systems, harnessing data, and leveraging the cloud to solve complex challenges. </p>
                         <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
                           
                             
@@ -418,7 +420,7 @@
                         <h3 class="f-title f_600 t_color f_size_18">Connect With Me</h3>
                         <div class="f_social_icon">
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tvborkar1234@gmail.com" class="fas fa-envelope"></a>
-                            <a href="https://github.com/tejasvb" class="fab fa-github"></a>
+                                                       <a href="https://github.com/tejasvb" class="fab fa-github"></a>
                             <a href="https://www.linkedin.com/in/tejas-borkar-03297b119/" class="fab fa-linkedin"></a>
                         
                         </div>
@@ -438,6 +440,86 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+<script>
+// Fetch and render experience dynamically
+fetch('experience.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.querySelector('#experience .container');
+
+    if (!container) return;
+    // Remove old experience cards
+    container.querySelectorAll('.experience-card').forEach(e => e.remove());
+    data.forEach((exp, idx) => {
+      const card = document.createElement('div');
+      card.className = 'experience-card mt-4';
+      // Split description into bullet points by <br> or <br/> or </br>
+      let desc = exp.description.replace(/<br\/?\s*>/gi, '\n').split(/\n|\r/).filter(line => line.trim() !== '');
+      let firstTwo = desc.slice(0, 2);
+      let rest = desc.slice(2);
+      let descList = '<ul style="padding-left: 1.2em;">' + firstTwo.map(line => `<li style='margin-bottom: 0.5em;'>${line.trim()}</li>`).join('') + '</ul>';
+      let moreList = '';
+      if (rest.length > 0) {
+        moreList = '<ul style="padding-left: 1.2em; display:none;" class="more-info-list">' + rest.map(line => `<li style='margin-bottom: 0.5em;'>${line.trim()}</li>`).join('') + '</ul>';
+        descList += `<button class="project-button more-info-btn" style="margin-top: 0.5em;">\n<span>More Info</span>\n<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" fill=\"none\">\n<path d=\"M0 0h24v24H0V0z" fill="none" />\n<path d=\"M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />\n</svg>\n</button>` + moreList;
+      }
+      card.innerHTML = `
+        <div class="experience-preview" id="duration">
+            <h3>${exp.duration}</h3>
+        </div>
+        <div class="experience-info">
+            <h3 id="position">${exp.position}</h3>
+            <div id="description">${descList}</div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+    // Add event listeners for More Info buttons
+    container.querySelectorAll('.more-info-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const moreList = this.nextElementSibling;
+        if (moreList && moreList.style.display === 'none') {
+          moreList.style.display = 'block';
+          this.style.display = 'none';
+        }
+      });
+    });
+  });
+// Fetch and render projects dynamically
+fetch('projects.json')
+  .then(response => response.json())
+  .then(data => {
+    const row = document.querySelector('#projects .container .row');
+    if (!row) return;
+    // Remove old project cards
+    row.innerHTML = '';
+    data.forEach(project => {
+      const col = document.createElement('div');
+      col.className = 'col-sm-4';
+      let tags = '';
+      if (Array.isArray(project.tags)) {
+        tags = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join(' ');
+      }
+      col.innerHTML = `
+        <article class="project">
+          <h4 class="project-title">${project.title}</h4>
+          ${tags}
+          <p class="project-info">${project.info}</p>
+         <a href="${project.link}">
+          <button class="project-button">
+            <span>More Info</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
+            </svg>
+          </button>
+        </a>
+        </article>
+      `;
+      row.appendChild(col);
+    });
+  });
+</script>
 </body>
 
 </html>

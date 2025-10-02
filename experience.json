@@ -1,0 +1,17 @@
+[
+  {
+    "duration": "March 2025- Present",
+    "position": " Senior Software Engineer, HERE Technologies",
+    "description": "• Designed and deployed multiple Spring Boot microservices on AWS ECS to orchestrate and execute EMR Spark jobs for large-scale batch data processing in a stateless, containerised environment, reducing manual effort.<br> • Collaborated with cross-functional teams to build a serverless data pipeline using AWS SQS, Lambda, and SNS, enabling asynchronous downstream API processing and real-time logging.<br> • Implemented custom data quality algorithms to detect duplicates, abbreviations, and geographic naming patterns, improving specific datasets’ quality by approximately 60%.<br> • Documented and updated technical documentation for multiple projects; conducted knowledge transfer (KT) sessions, delivered demos, and mentored interns to ensure smooth onboarding and project continuity"
+  },
+    {
+    "duration": "June 2023- Feb 2025",
+    "position": "Software Developer II, HERE Technologies",
+    "description": " • Optimised a Spark-based pipeline on AWS EMR that processes multiple large-scale graphs, improving processing efficiency and reducing compute cost.<br>• Re-architected the workflow to write intermediate outputs from each processing stage to S3 instead of Elasticsearch, enabling scalable, cost-effective storage and improving downstream data handling.<br> • Designed and implemented a Python-based testing framework that automated the validation of algorithm outputs across microservices by pulling batch data from S3 in response to SQS triggers; compared results against expected outputs and sent detailed test reports via email, reducing manual QA effort and improving system reliability by 20<br> • Maintained and enhanced Spring Boot microservices, improving system performance and proactively resolving production escalations.<br> • Developed a React app with “useContext” for global state management and real-time UI updates; cached responses to reduce network calls by 40% <br> • Collaborated on Spring Boot REST APIs to integrate backend services with a React-based frontend, enabling real-time user input processing and improved system responsiveness."
+  },
+  {
+    "duration": "August 2021-Aprill 2022",
+    "position": "Flutter Developer Intern, Emvoke Technology",
+    "description": " • Developed front-end and integrated multiple APIs, improving application performance by 30% and enhancing user experience. <br> • Programmed a code to upload large images to S3, convert them to multiple formats, and optimise quality, reducing image size by 60% for improved thumbnails and web performance.<br>  • Built a responsive UI for web and mobile, incorporating multilingual support for various health-related features. <br> • Various state management patterns, such as Bloc, were used to modularise and manage the application effectively."
+  }
+]

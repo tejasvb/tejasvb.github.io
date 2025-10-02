@@ -10,7 +10,7 @@ const wave = document.querySelector('.parallax');
 const darkmodewave = `  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(000,000,000,0.7" />
 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(000,000,000,0.5)" />
 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(000,000,000,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#000"/>`
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#1a1a1a"/>`
 const lightmodewave = ` <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
