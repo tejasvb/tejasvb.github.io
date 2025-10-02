@@ -1,0 +1,12 @@
+# _config.yml
+
+title: "My Portfolio"
+description: "A description of my personal website"
+baseurl: "" 
+url: "https://tejasvb.github.io/"  
+
+theme: jekyll-theme-primer
+
+sass:
+  style: :compressed
+  load_paths: []  
