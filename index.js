@@ -15,17 +15,27 @@ const lightmodewave = ` <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(2
 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>`
-document.querySelector(".toggle input").addEventListener("change", (evt) => {
-	if (themeStyle.getAttribute('href') === './index.css') {
-        themeStyle.setAttribute('href', './index_dark_mode.css');
-        wave.innerHTML = darkmodewave;
-  
+const toggleInput = document.querySelector(".toggle input");
 
-       
-        
-    } else {
-        themeStyle.setAttribute('href', './index.css');
-        wave.innerHTML = lightmodewave;
-    }
-  });
+function setDarkMode(isDark) {
+  if (isDark) {
+    themeStyle.setAttribute('href', './index_dark_mode.css');
+    wave.innerHTML = darkmodewave;
+  } else {
+    themeStyle.setAttribute('href', './index.css');
+    wave.innerHTML = lightmodewave;
+  }
+  localStorage.setItem('darkMode', isDark);
+}
+
+toggleInput.addEventListener("change", (evt) => {
+  // Set dark mode or light mode based on the checkbox state
+  setDarkMode(evt.target.checked);
+});
+
+// On page load, apply saved mode from localStorage
+const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+toggleInput.checked = savedDarkMode;
+setDarkMode(savedDarkMode);
+
 
