@@ -2,14 +2,11 @@
 
 title: "My Portfolio"
 description: "A description of my personal website"
-baseurl: ""  # If your site is hosted at the root, leave it as ""
-url: "https://yourusername.github.io"  # Change to your GitHub Pages URL
+baseurl: "" 
+url: "https://tejasvb.github.io/"  
 
-# Set theme options or disable SCSS
 theme: jekyll-theme-primer
 
-# Disable Sass processing if not using SCSS
 sass:
   style: :compressed
-  load_paths: []  # Prevent Jekyll from looking for SCSS files
-
+  load_paths: []  
